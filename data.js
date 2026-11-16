@@ -46,7 +46,7 @@ const movies = [
         year: 2017,
         date: "2018-01-11",
         rating: 8.8,
-        poster: "https://image.tmdb.org/t/p/w600_and_h900_face/pQu93NuwR90AaCULzglVD5Ge4Ml.jpg"
+        poster: "/pQu93NuwR90AaCULzglVD5Ge4Ml.jpg"
     }
 
 ];
