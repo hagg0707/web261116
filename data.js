@@ -41,13 +41,12 @@ const movies = [
         poster: "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
     },
 
-    // 여섯 번째 영화: TMDB 검색 결과로 교체
     {
-        title: "여섯 번째 영화",
-        year: 2026,
-        date: "2026-01-01",
-        rating: 0,
-        poster: ""
+        title: "코코",
+        year: 2017,
+        date: "2018-01-11",
+        rating: 8.8,
+        poster: "https://image.tmdb.org/t/p/w600_and_h900_face/pQu93NuwR90AaCULzglVD5Ge4Ml.jpg"
     }
 
 ];
