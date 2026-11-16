@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 영화 보드</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <a class="logo" href="index.html">내 영화 보드</a>
+
+    <nav>
+        <a href="#mine">내 인생 영화</a>
+        <a href="#boxoffice">박스오피스</a>
+        <a href="#out">영화 통계</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="eyebrow">MY MOVIE COLLECTION</p>
+        <h1>내 영화 보드</h1>
+        <p>내가 좋아하는 영화와 오늘의 박스오피스를 확인하는 영화 보드입니다.</p>
+        <a class="hero-link" href="#mine">영화 보러 가기 ↓</a>
+    </div>
+</section>
+
+<main>
+
+    <!-- 영화 통계 출력 -->
+    <p id="out" class="movie-result"></p>
+
+    <!-- 내 인생 영화 -->
+    <section id="mine" class="movie-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>내 인생 영화</h2>
+                <p>다시 보고 싶은 영화들을 모았습니다.</p>
+            </div>
+        </div>
+
+        <!-- 영화 개수와 정렬 선택 -->
+        <div class="toolbar">
+            <p id="count">영화 개수: 0편</p>
+
+            <select id="sort" onchange="applySort()">
+                <option value="rating">평점순</option>
+                <option value="year">최신 개봉순</option>
+                <option value="title">제목순</option>
+            </select>
+        </div>
+
+        <!-- JavaScript가 영화 카드를 생성하는 영역 -->
+        <div class="board" id="movie-board"></div>
+    </section>
+
+    <!-- 박스오피스 -->
+    <section id="boxoffice" class="movie-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>일별 박스오피스 TOP 5</h2>
+                <p class="basis">KOBIS 기준일 2026-10-26</p>
+            </div>
+        </div>
+
+        <div class="board">
+
+            <article class="card">
+                <img class="poster" src="https://www.kobis.or.kr/common/mast/movie/2026/10/thumb_x192/thn_a64f55007e4c4fc1b305765424584806.jpg" alt="암살자들 포스터">
+                <span class="rank">1</span>
+                <span class="badge">8.9</span>
+                <div class="info">
+                    <h3>암살자(들)</h3>
+                    <p class="year">개봉 2026-09-23</p>
+                    <p class="audience">누적 3,374,335명</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="poster" src="https://www.kobis.or.kr/common/mast/movie/2026/10/thumb_x192/thn_ad45d4eb696745b58aba66d8310d67eb.jpg" alt="실낙원 포스터">
+                <span class="rank">2</span>
+                <span class="badge">7.3</span>
+                <div class="info">
+                    <h3>실낙원</h3>
+                    <p class="year">개봉 2026-10-21</p>
+                    <p class="audience">누적 104,873명</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="poster" src="https://www.kobis.or.kr/common/mast/movie/2026/10/thumb_x192/thn_655d7382203f49ef8b6912cad51da2aa.jpg" alt="타짜 포스터">
+                <span class="rank">3</span>
+                <span class="badge">8.5</span>
+                <div class="info">
+                    <h3>타짜: 벨제붑의 노래</h3>
+                    <p class="year">개봉 2026-09-23</p>
+                    <p class="audience">누적 1,999,416명</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="poster" src="https://www.kobis.or.kr/common/mast/movie/2026/10/thumb_x192/thn_b744df01cca04016af452a42d1be5bbf.jpg" alt="여전히 찬란하게 포스터">
+                <span class="rank">4</span>
+                <span class="badge">9.8</span>
+                <div class="info">
+                    <h3>여전히 찬란하게</h3>
+                    <p class="year">개봉 2026-10-21</p>
+                    <p class="audience">누적 41,037명</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="poster" src="https://www.kobis.or.kr/common/mast/movie/2026/10/thumb_x192/thn_f5ef779b5f9c43e5aa8c71aa68eca7af.jpg" alt="킬링타임 포스터">
+                <span class="rank">5</span>
+                <span class="badge">8.3</span>
+                <div class="info">
+                    <h3>킬링타임</h3>
+                    <p class="year">개봉 2026-10-21</p>
+                    <p class="audience">누적 19,121명</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>이 사이트는 TMDB API를 사용하지만 TMDB의 보증이나 인증을 받지 않았습니다.</p>
+    <p>박스오피스 데이터: 영화진흥위원회 영화관입장권통합전산망(KOBIS)</p>
+</footer>
+
+<!-- data.js를 먼저 불러온 뒤 app.js를 불러옵니다. -->
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
