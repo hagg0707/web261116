@@ -300,6 +300,17 @@ footer p {
 
   .hero-content {
     padding-top: 70px;
+
+    .poster-fallback {
+  aspect-ratio: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent), var(--surface));
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+}
     padding-bottom: 70px;
   }
 }
