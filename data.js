@@ -1,6 +1,5 @@
-// 영화 정보 배열
-// 영화 한 편을 추가할 때는 아래 객체 형식으로 배열 안에 추가하면 됩니다.
 const movies = [
+
     {
         title: "인터스텔라",
         year: 2014,
@@ -44,14 +43,7 @@ const movies = [
         rating: 9.4,
         poster: "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
         description: "두 가족의 만남으로 시작되는 사회 풍자 드라마."
-    },
-
-    {
-        title: "인셉션",
-        year: 2010,
-        date: "2010-07-21",
-        rating: 8.4,
-        poster: "/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
-        description: "꿈속에서 생각을 훔치는 작전을 수행하는 사람들의 이야기."
     }
+
 ];
+```
